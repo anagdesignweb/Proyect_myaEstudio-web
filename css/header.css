@@ -1,1 +1,26 @@
 /* --- header --- */
+
+
+.container-navbar{
+display: flex;
+flex-direction: row;
+}
+
+.navbar-logo{
+width: 300px;
+}
+.navbar-logo img{
+    width: 100%;
+    height: auto;
+    }
+@supports(object-fit: cover){
+    .navbar-logo img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+
+.nav_right{
+    margin-left: auto;
+}

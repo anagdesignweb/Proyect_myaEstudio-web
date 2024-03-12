@@ -6,8 +6,6 @@
 @import url(../css/footer.css);
 
 
-
-
 /* FORMATEO INCIAL  */
 *, *::before, *::after, html{
     padding: 0;
@@ -67,6 +65,12 @@ p{
     font-weight: 500;
     line-height: 20.9px;
 }
+
+/* -- GENERAL -- */
+.rojj{
+    border: 1px solid red;
+}
+
 
 
 
