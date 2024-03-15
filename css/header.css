@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 16px;
+    border-bottom: 0.5px solid var(--color-neutral-light);
+    
 }
 
 .container-navbar{
@@ -12,15 +15,18 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
 }
 
 .navbar-logo{
 width: 180px;
 }
+
 .navbar-logo img{
     width: 100%;
     height: auto;
-    }
+}
+/*
 @supports(object-fit: cover){
     .navbar-logo img{
       height: 100%;
@@ -28,38 +34,61 @@ width: 180px;
       object-position: center center;
     }
 }
-
+*/
 
 /* -Menu burger- */
 
-
-
 /* -de aqui- es el diseño del menu desplegable */
 .menu {
-    text-align: center;
     width: 280px;
-    height: 640px;
+    height: 500px;
     display: none;
     position: absolute;
     top: 80px;
     right: 0px;
-    border: 1px solid rgb(19, 197, 10);
-    background: rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.405);
     backdrop-filter: blur(16px);
+    padding: 25px;
 } 
-.menu a {
-    position:relative;
-    z-index: 2;
+.container-menu{
+    height: 100%;
     display: flex;
-    justify-content: left;
-    height: 30px;
-    text-decoration: none;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.menu-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 60px;
+}
+
+.menu .menu-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.a-login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+}
+
+#toggle { /* icono menu desplegable */
+    display: none;
 }
 /* -a aqui- */
+
+
 .container-navbar label{
     display: block;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     right: 0;
 }
 /*recuerda que esta funcion es la que hace que el toggle funcione, en estado */

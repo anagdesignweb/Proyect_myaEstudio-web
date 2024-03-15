@@ -1,33 +1,34 @@
-
 /* ------ Navbar ------ */
 @import url(../css/header.css);
 
 /* ------ footer ------ */
 @import url(../css/footer.css);
 
-
 /* FORMATEO INCIAL  */
-*, *::before, *::after, html{
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
+*,
+*::before,
+*::after,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
 }
-
 
 /* VARIABLES */
 
-:root{
-    /*Color style*/
-    --color-primary-default: #29A39D;
-    --color-primary-hover: #21827E;
-    --color-primary-presset: #19625E;
-    --color-secondary-default: #F27A90;    
-    --color-neutral-medium: #808080;
-    --color-neutral-dark: #2B2B2B;
-    --color-neutral-light: #C0C0C0;
-    --color-accent: #F4AF3E;
+:root {
+  /*Color style*/
+  --color-primary-default: #29a39d;
+  --color-primary-hover: #21827e;
+  --color-primary-presset: #19625e;
+  --color-secondary-default: #f27a90;
+  --color-secondary-light: #FDE9EC;
+  --color-neutral-medium: #808080;
+  --color-neutral-dark: #2b2b2b;
+  --color-neutral-light: #c0c0c0;
+  --color-accent: #f4af3e;
 }
 
 /*text styles*/
@@ -36,46 +37,61 @@ font-family: 'Roboto flex', sans-serif;
 font-family: "Poppins", sans-serif;
 */
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    color: var(--color-neutral-dark);
-    line-height: 14px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-neutral-dark);
+  line-height: 14px;
 }
 h1 {
-    font-size: 61.04px;
-
+  font-size: 61.04px;
 }
-h2{
-    font-size: 48.83px;
-
+h2 {
+  font-size: 48.83px;
 }
-h3{
-    font-size: 39.06px;
-
+h3 {
+  font-size: 39.06px;
 }
-h4{
-    font-size: 31.25px;
+h4 {
+  font-size: 31.25px;
 }
-p{
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20.9px;
+p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.9px;
 }
 
 /* -- GENERAL -- */
-.rojj{
-    border: 1px solid red;
+
+.rojj {
+  border: 1px solid red;
 }
-.azzu{
-    border: 1px solid rgb(55, 0, 255);
+.azzu {
+  border: 1px solid rgb(55, 0, 255);
 }
 
-
-
+a {
+  text-decoration: none;
+  color: var(--color-neutral-dark);
+}
+* {
+  outline: none !important;
+}
+textarea:focus,
+input:focus {
+  outline: none !important;
+}
+/* de momento los enlaces estan sin colores, pendiente de cambiar*/
+a, a:hover, a:visited{
+  text-decoration: none;
+}
 
 /* -- header -- */
 /* -- Main -- */
