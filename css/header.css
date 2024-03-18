@@ -19,7 +19,7 @@
 }
 
 .navbar-logo{
-width: 180px;
+    width: 180px;
 }
 
 .navbar-logo img{
@@ -42,14 +42,20 @@ width: 180px;
 .menu {
     width: 280px;
     height: 500px;
-    display: none;
     position: absolute;
     top: 80px;
     right: 0px;
     background: rgba(255, 255, 255, 0.405);
     backdrop-filter: blur(16px);
     padding: 25px;
+
+    display: none;
 } 
+.menu.visible{
+    display: block;
+}
+
+
 .container-menu{
     height: 100%;
     display: flex;
@@ -76,27 +82,63 @@ width: 180px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 9px;
+    gap: 5px;
 }
 
-#toggle { /* icono menu desplegable */
+#toggle { /* checkbox menu desplegable */
     display: none;
 }
 /* -a aqui- */
 
 
-.container-navbar label{
+.navbar-menu-icon label{
     display: block;
     cursor: pointer;
     position: relative;
     right: 0;
 }
-/*recuerda que esta funcion es la que hace que el toggle funcione, en estado */
+/*recuerda que esta funcion es la que hace que el toggle funcione, en estado 
 #toggle:checked + .menu {
     display: block;
 }
+*/
 
 #nav-contact{
     display: flex;
 }
 
+
+
+@media screen and (min-width: 550px) {
+
+    .navbar-menu-icon{
+        display: none;
+        background-color: blueviolet;
+    }
+    .menu {
+        width: 100%;
+        height: auto;
+        display: block;
+        position:static;
+        background: none;
+        backdrop-filter: none;
+        gap: 20px;
+    
+    } 
+    .container-menu{
+        height: 100%;
+        flex-direction:row;
+        justify-content: space-between;
+        
+    }
+    .menu-1{
+
+        flex-direction: row;
+        align-items: baseline;
+        gap: 20px;
+    }
+    .a-shop{
+        margin-right: 10px;
+    }
+
+}
