@@ -97,6 +97,7 @@
     position: relative;
     right: 0;
 }
+
 /*recuerda que esta funcion es la que hace que el toggle funcione, en estado 
 #toggle:checked + .menu {
     display: block;
