@@ -1,13 +1,6 @@
 const nav = document.querySelector("#nav");
-const toggle = document.querySelector("#toggle");
-const divLinks = document.querySelector(".menu-1");
-
-
-toggle.addEventListener("click", () => {
-  nav.classList.add("visible");
-});
-
-
+const divLinks = document.querySelector("#menu1");
+const botoncito = document.querySelector("#toggle-menu");
 
 let menu = [
   {
@@ -25,9 +18,17 @@ let menu = [
 ];
 
 
+//funcion menu desplegable
+
+botoncito.addEventListener("click",  () => {
+    nav.classList.toggle("visible");
+    nav.classList.toggle("invisible");
+  })
+
+
 menu.forEach((item) => {
     divLinks.innerHTML +=`<a href="${item.url}">${item.name}</a`;
-    });
+});
 
 
 /*
@@ -47,7 +48,6 @@ function mostrarMenu() {
 
 }
 mostrarMenu();
-
 
 
 for (let i = 0; i < menu.length; i++) {

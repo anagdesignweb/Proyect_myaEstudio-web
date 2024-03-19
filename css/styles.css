@@ -1,6 +1,7 @@
 /* ------ Navbar ------ */
 @import url(../css/header.css);
-
+/* ------ home ------ */
+@import url(../css/home.css);
 /* ------ footer ------ */
 @import url(../css/footer.css);
 
@@ -11,7 +12,7 @@
 html {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -23,11 +24,13 @@ html {
   --color-primary-default: #29a39d;
   --color-primary-hover: #21827e;
   --color-primary-presset: #19625e;
+
   --color-secondary-default: #f27a90;
   --color-secondary-light: #FDE9EC;
   --color-neutral-medium: #808080;
   --color-neutral-dark: #2b2b2b;
   --color-neutral-light: #c0c0c0;
+  --color-neutral-light-2: #F5F5F5;
   --color-accent: #f4af3e;
 }
 
@@ -43,11 +46,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-neutral-dark);
-  line-height: 14px;
+  line-height: 40px;
 }
 h1 {
   font-size: 61.04px;
@@ -66,16 +69,10 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: 20.9px;
+  color: var(--color-neutral-dark);
 }
 
 /* -- GENERAL -- */
-
-.rojj {
-  border: 1px solid red;
-}
-.azzu {
-  border: 1px solid rgb(55, 0, 255);
-}
 
 a {
   text-decoration: none;

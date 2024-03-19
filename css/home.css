@@ -1,0 +1,80 @@
+.section-1{
+    height: 438px;
+    background: url("../Assets/images/bebes6.jpg");
+    background-position: center; /* Center the image */
+    background-size: cover;
+}
+
+.section-2{
+    height: 400px;
+    border-bottom: 1px solid var(--color-neutral-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.section-2 h4{
+    text-align: center;
+    padding-top: 30px;
+}
+.section-2 p{
+    text-align: center;
+    padding-top: 20px;
+}
+.section-2 .container-2{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+}
+
+.button-primary{
+    width: 128px;
+    cursor: pointer;
+    padding: 8px 16px;
+    line-height: 20px;
+    border-radius: 10px;
+    background: var(  --color-primary-default);
+    color: white;
+    border-style: none;
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: #1b1f2326;
+    transition-duration: 0.1s;
+}
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.input-primary-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    border: none;
+    background: #ffffff;
+    background-size: 20px 20px;
+    border: 1px solid var(--color-neutral-light);
+    width: 315px;
+    height: 45px;
+    padding: 15px 12px;
+    border-radius: 5px;
+}
+.input-primary-email::placeholder{
+    color: var(--color-neutral-light);
+}
+.input-primary-email:hover{
+    background-color: var(--color-neutral-light-2);
+    border-color: #1b1f2326;
+    transition-duration: 0.1s;
+}
+.input-primary-email:focus {
+    outline: none;
+    border: 1px solid var(  --color-primary-hover);
+}
