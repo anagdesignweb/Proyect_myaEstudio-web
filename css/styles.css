@@ -24,7 +24,6 @@ html {
   --color-primary-default: #29a39d;
   --color-primary-hover: #21827e;
   --color-primary-presset: #19625e;
-
   --color-secondary-default: #f27a90;
   --color-secondary-light: #FDE9EC;
   --color-neutral-medium: #808080;
@@ -68,7 +67,7 @@ p {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20.9px;
+  line-height: 21px;
   color: var(--color-neutral-dark);
 }
 
@@ -89,8 +88,21 @@ input:focus {
 a, a:hover, a:visited{
   text-decoration: none;
 }
+body{
 
-/* -- header -- */
+}
+
 /* -- Main -- */
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section{
+  max-width: 1200px;
+}
+
 /* -- Footer -- */
 /* -- Queries -- */
