@@ -16,79 +16,154 @@
 
 <body>
     <header class="navbar">
-            <div class="container-navbar">
-                <div class="navbar-logo">
-                    <img src="Assets/logo mya 2022.png" alt="Logo nombre de la empresa"> 
-                </div>              
-                <div class="navbar-menu-icon">
-                    <span id="toggle-menu" class="material-symbols-outlined">menu</span>
-                </div>
-                <nav class="navbar-nav menu" id="nav">
-                    <div class="container-menu">
-                        <div class="menu-1" id="menu1">                      
-                        </div>
-                        <div class="menu-2"> 
-                            <a href="" class="a-shop">
-                                <span class="material-symbols-outlined">shopping_cart</span>
-                            </a> 
-                            <a href="" class="a-login">
-                                <span class="material-symbols-outlined">login</span>
-                                <p>Login</p>
-                            </a>
-                        </div>   
-                    </div>
-                </nav>   
+        <div class="container-navbar">
+            <div class="navbar-logo">
+                <img src="Assets/logo mya 2022.png" alt="Logo nombre de la empresa">
             </div>
+            <div class="navbar-menu-icon">
+                <span id="toggle-menu" class="material-symbols-outlined">menu</span>
+            </div>
+            <nav class="navbar-nav menu" id="nav">
+                <div class="container-menu">
+                    <div class="menu-1" id="menu1">
+                    </div>
+                    <div class="menu-2">
+                        <a href="" class="a-shop">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </a>
+                        <a href="" class="a-login">
+                            <span class="material-symbols-outlined">login</span>
+                            <p>Login</p>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
     <!-- TODO Add main content -->
     <main class="container-main">
-<!-- Section 1 -->
+        <!-- Section 1 -->
         <section class="section-1 section-flex-colum-mobile">
             <div></div>
         </section>
-<!-- Section 2 -->
+        <!-- Section 2 -->
         <section class="section-2 section-flex-colum-mobile">
             <div class="container-1">
                 <h4 class="text-align-cent">¿Quieres reservar tu sesión?</h4>
             </div>
             <div class="container-2">
-                    <p class="text-align-cent">Ponte en contacto con Nosotros para información o directamente concretar una cita. Déjanos tu contacto y te llamaremos!</p>
-                    <input class="input-primary-email" type="text" placeholder="Your email">
-                    <button class="button-primary">Contactar</button>
+                <p class="text-align-cent">Ponte en contacto con Nosotros para información o directamente concretar una
+                    cita. Déjanos tu contacto y te llamaremos!</p>
+                <input class="input-primary-email" type="text" placeholder="Your email">
+                <button class="button-primary">Contactar</button>
             </div>
         </section>
-<!-- Section 3 -->
+        <!-- Section 3 -->
 
 
-        <section class="section-3">
+        <section class="section-3" id="carrusel-list">
+
             <h4>En nuestra galería puedes ver mas de nuestro trabajo</h4>
-
-            <div class="card-1">
-                <div class="card-img">           
-                </div>
-                <div class="card-text">
-                    <div>
-                        <h5>Comuniones</h5>
-                        <a href="">Una experiencia para los niños muy especial</a>                        
-                    </div>
-                    <i class="material-symbols-outlined i-add">add</i>
-                </div>                           
+            <div>
+                <button class="carrusel-arrow carrusel-back" id="button-back">
+                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                </button>  
+                <button class="carrusel-arrow carrusel-prev" id="button-prev">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
             </div>
 
+            <div  class="carrusel-track" id="track">
+
+                <div class="card-1 carrusel">
+                    <div class="card-img">
+                    </div>
+                    <div class="card-text">
+                        <div>
+                            <h5>Primera</h5>
+                            <a href="">Una experiencia para los niños muy especial</a>
+                        </div>
+                        <i class="material-symbols-outlined i-add">add</i>
+                    </div>
+                </div>
+                
+                <div class="card-1 carrusel">
+                    <div class="card-img">
+                    </div>
+                    <div class="card-text">
+                        <div>
+                            <h5>Comuniones</h5>
+                            <a href="">Una experiencia para los niños muy especial</a>
+                        </div>
+                        <i class="material-symbols-outlined i-add">add</i>
+                    </div>
+                </div>
+                <div class="card-1 carrusel">
+                    <div class="card-img">
+                    </div>
+                    <div class="card-text">
+                        <div>
+                            <h5>Comuniones</h5>
+                            <a href="">Una experiencia para los niños muy especial</a>
+                        </div>
+                        <i class="material-symbols-outlined i-add">add</i>
+                    </div>
+                </div>            
+                <div class="card-1 carrusel">
+                    <div class="card-img">
+                    </div>
+                    <div class="card-text">
+                        <div>
+                            <h5>Comuniones</h5>
+                            <a href="">Una experiencia para los niños muy especial</a>
+                        </div>
+                        <i class="material-symbols-outlined i-add">add</i>
+                    </div>
+                </div>
+                <div class="card-1 carrusel">
+                    <div class="card-img">
+                    </div>
+                    <div class="card-text">
+                        <div>
+                            <h5>Comuniones</h5>
+                            <a href="">Una experiencia para los niños muy especial</a>
+                        </div>
+                        <i class="material-symbols-outlined i-add">add</i>
+                    </div>
+                </div>
+                <div class="card-1 carrusel">
+                    <div class="card-img">
+                    </div>
+                    <div class="card-text">
+                        <div>
+                            <h5>Comuniones</h5>
+                            <a href="">Una experiencia para los niños muy especial</a>
+                        </div>
+                        <i class="material-symbols-outlined i-add">add</i>
+                    </div>
+                </div>
+            </div>
+
+
+
         </section>
-<!-- Section 4 -->
+        <!-- Section 4 -->
         <section class="section-4 section-flex-colum-mobile">
             <h3 class="text-align-cent">Un poco sobre mi</h3>
             <div class="personal-image"><img src="./Assets/MARIGUA-IMG.jpg" alt="imagen personal"></div>
-            <p class="pading-text-general">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, consequatur molestias, quidem magnam et recusandae enim id soluta nesciunt commodi dolores, deserunt harum ex quam nostrum alias repudiandae impedit vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint, quisquam repellendus fuga accusamus sequi nostrum nisi aliquid possimus inventore molestiae laborum quis esse temporibus nesciunt doloremque harum at tenetur.</p>
+            <p class="pading-text-general">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, consequatur
+                molestias, quidem magnam et recusandae enim id soluta nesciunt commodi dolores, deserunt harum ex quam
+                nostrum alias repudiandae impedit vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                sint, quisquam repellendus fuga accusamus sequi nostrum nisi aliquid possimus inventore molestiae
+                laborum quis esse temporibus nesciunt doloremque harum at tenetur.</p>
         </section>
-<!-- Section 5 -->
+        <!-- Section 5 -->
         <!-- 
         <section class="section-5 section-flex-colum-mobile">
             <p>google review</p>
         </section> 
         -->
-<!-- Section 6 -->
+        <!-- Section 6 -->
         <section class="section-6 section-flex-colum-mobile">
             <div class="s6-cont1">
                 <h2>contacto</h2>
@@ -97,14 +172,18 @@
                     <p>+34 666 67 76 67</p>
                     <p>C/ Lorem Sun , Sumsum</p>
                 </div>
-                <div class="footer-icons">                    
+                <div class="footer-icons">
                     <img src="Assets/icons/square-Facebook.svg" alt="icono enlace a facebook">
                     <img src="Assets/icons/square-Instagram.svg" alt="icono enlace a instagram">
-                    <img src="Assets/icons/square-Instagram.svg" alt="icono enlace a whatsapp"></div>
+                    <img src="Assets/icons/square-Instagram.svg" alt="icono enlace a whatsapp">
+                </div>
             </div>
-            <div class="s6-cont2"><iframe class="s6-cont2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.7364921380504!2d-4.5444754!3d36.608655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72fdddd7f603d5%3A0x19949bd868575833!2sMYA%20Estudio%20Fotograf%C3%ADa!5e0!3m2!1ses!2ses!4v1710962297856!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="s6-cont2"><iframe class="s6-cont2"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.7364921380504!2d-4.5444754!3d36.608655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72fdddd7f603d5%3A0x19949bd868575833!2sMYA%20Estudio%20Fotograf%C3%ADa!5e0!3m2!1ses!2ses!4v1710962297856!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </section>
-<!-- Section 7 -->
+        <!-- Section 7 -->
         <section class="section-7 section-flex-colum-mobile">
             <h3>FAQ</h3>
             <div class="container-faq">
@@ -124,7 +203,10 @@
                 </div>
                 <div class="faq-response">
                     <h6>titulo de la pregunta</h6>
-                    <p>respuesta Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti sed similique ut hic. Sit quas sapiente, dolore aliquid, fuga obcaecati harum sint dolorem accusamus provident libero cumque at quam! Sit quas sapiente, dolore aliquid, fuga obcaecati harum sint dolorem accusamus provident libero cumque at quam!</p>
+                    <p>respuesta Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis corrupti sed
+                        similique ut hic. Sit quas sapiente, dolore aliquid, fuga obcaecati harum sint dolorem accusamus
+                        provident libero cumque at quam! Sit quas sapiente, dolore aliquid, fuga obcaecati harum sint
+                        dolorem accusamus provident libero cumque at quam!</p>
                 </div>
             </div>
         </section>
@@ -139,7 +221,7 @@
                     <img src="Assets/icons/icon-instagram.svg" alt="icono enlace a instagram">
                     <img src="Assets/icons/icon-whatsapp.svg" alt="icono enlace a whatsapp">
                 </div>
-                <div class="footer-contact" >
+                <div class="footer-contact">
                     <div>myaestudiofotografiayarte@gmail.com</div>
                     <div>+1-2345-6789</div>
                     <div>Calle castilla 2, Málaga, Spain</div>
@@ -150,6 +232,7 @@
 
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/scriptCarrusel.js"></script>
 </body>
 
 </html>

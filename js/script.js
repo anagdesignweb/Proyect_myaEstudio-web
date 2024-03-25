@@ -5,15 +5,15 @@ const botoncito = document.querySelector("#toggle-menu");
 let menu = [
   {
     name: "Home",
-    url: "./index.html",
+    url: "pages/index.html",
   },
   {
     name: "Gallery",
-    url: "./Gallery.html",
+    url: "pages/Gallery.html",
   },
   {
     name: "Contact",
-    url: "./Contact.html",
+    url: "pages/Contact.html",
   },
 ];
 
@@ -27,8 +27,17 @@ botoncito.addEventListener("click",  () => {
 
 
 menu.forEach((item) => {
-    divLinks.innerHTML +=`<a href="${item.url}">${item.name}</a`;
+    divLinks.innerHTML +=`<a href="${item.url}">${item.name}</a>`;
 });
+
+
+
+
+
+
+
+
+
 
 
 /*
