@@ -2,6 +2,10 @@ const nav = document.querySelector("#nav");
 const divLinks = document.querySelector("#menu1");
 const botoncito = document.querySelector("#toggle-menu");
 
+const trackCarousel = document.getElementById("track");
+
+
+
 let menu = [
   {
     name: "Home",
@@ -45,11 +49,6 @@ function mostrarMenu() {
 
 }
 mostrarMenu();
-
-
-for (let i = 0; i < menu.length; i++) {
-  console.log(menu[i].name);
-}
 */
 
 /*
@@ -58,11 +57,7 @@ Funcion printCard -> pinta una sola card
 funcion printAllCards -> pinta con un bucle todas las cards
 */
 
-const trackCarousel = document.getElementById("track");
-
-
 function printCard(img, title, description) {
-
   trackCarousel.innerHTML += `<div class="card-1 carrusel">
                                 <div class="card-img">${img}
                                 </div>
@@ -74,23 +69,18 @@ function printCard(img, title, description) {
                                     <i class="material-symbols-outlined i-add">add</i>
                                 </div>
                               </div>'`;
-}
+};
 
 
-printCard("imagen", "titulillo", "blablabla");
-
-let arrayPrueba = [2,4,7,5,3];
-
-
-function printAllCards (){
-
-  for (let i = 0; i < arrayPrueba.length; i++) {
-    console.log(arrayPrueba[i]);
-    printCard(arrayPrueba[i], arrayPrueba[i], arrayPrueba[i])
+function printAllCards (arr){
+  for (let i = 0; i < arr.length; i++) {
+    debugger;
+    console.log(arr[i].title);
+    console.log(arr.length);
+    printCard(arr[i].title, arr[i].title, arr[i].title);
+    debugger;
   }
-
-}
-printAllCards();
+};
 
 /*
 Ejercicios:
@@ -100,41 +90,50 @@ function formatter / parser
 2. funcion de informacion al usuario segun el status.
 */
 
-
-
 /* Funciones para cargar datos desde la API */
 
-let array = [];
+let arrayApi = [];
 
-fetch("https://gkfibffviwvmphzqvuqe.supabase.co/rest/v1/stories?select=*", {
+function formatter (ar, x){
+  ar.push({
+    title: x.name || "",
+    description:x.short_description || "",
+    url: x.image || "",
+  })
+};
+
+
+fetch("https://mdlbiyrwccyoblevhoid.supabase.co/rest/v1/sections?select=*", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
     apikey:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdrZmliZmZ2aXd2bXBoenF2dXFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5ODQ5NTgsImV4cCI6MjAyNjU2MDk1OH0.M--1JO0f0zos59CcBc8oCPKZmz2su3qx0Z2hOqQK9c0",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kbGJpeXJ3Y2N5b2JsZXZob2lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5NjA3MDgsImV4cCI6MjAyNjUzNjcwOH0.RNheTQLsl5dmh4406McR8ttAmwzfoxnEiDo4gutMCbA",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdrZmliZmZ2aXd2bXBoenF2dXFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5ODQ5NTgsImV4cCI6MjAyNjU2MDk1OH0.M--1JO0f0zos59CcBc8oCPKZmz2su3qx0Z2hOqQK9c0",
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kbGJpeXJ3Y2N5b2JsZXZob2lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5NjA3MDgsImV4cCI6MjAyNjUzNjcwOH0.RNheTQLsl5dmh4406McR8ttAmwzfoxnEiDo4gutMCbA",
   },
   mode: "cors",
-})
-  .then((res) => {
-    if (res.status === 200) {
-      res
-        .json()
-        .then((r) => {
-          debugger;
-          array = [...r];
-          console.log(array.length);
-          console.log(array[0]);
-        })
-        .catch((e) => {
-          debugger;
+}).then((res) => {
+  if (res.status === 200) {
+    console.log("status de mas de 200");
+    alert("status de mas de 200");
+    res
+      .json()
+      .then((r) => {
+        r.forEach((i) => {
+          formatter (arrayApi, i)
         });
-    }
-  })
-  .catch((err) => {
-    debugger;
-  });
+        console.log(arrayApi);
+        printAllCards(arrayApi);
+      })
+      .catch((e) => {
+      });
+  } if (res.status >= 400) {
+    console.log("status de mas de 400");
+  }
+});
 
 
+
+// creo que no funciona el print porque los datos del array cuando llega a esta liniea no los tiene aun porque el fecch es una funcion asincrona, entonces tendre o que llamarla dentro del fech o darle un away al fech.SOLUCIONADOOO!! JEJE
 
