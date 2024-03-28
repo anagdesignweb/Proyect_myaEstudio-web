@@ -92,7 +92,7 @@ a, a:hover, a:visited{
   text-decoration: none;
 }
 body{
-overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /* -- Main -- */

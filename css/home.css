@@ -96,6 +96,7 @@
 /* Sección 3 - Slider de la galería */
 
 .section-3{
+    position:relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +143,6 @@
 .carrusel-track{
     border: 1px solid red;
     overflow-x: visible;
-    width: 100%;
     position: relative;
     top: 0;
     left: 0;
