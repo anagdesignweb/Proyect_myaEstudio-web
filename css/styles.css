@@ -1,9 +1,14 @@
 /* ------ Navbar ------ */
 @import url(../css/header.css);
-/* ------ home ------ */
-@import url(../css/home.css);
 /* ------ footer ------ */
 @import url(../css/footer.css);
+/* ------ home ------ */
+@import url(../css/home.css);
+/* ------ gallery ------ */
+@import url(../css/gallery.css);
+/* ------ contact ------ */
+@import url(../css/contact.css);
+
 
 /* FORMATEO INCIAL  */
 *,

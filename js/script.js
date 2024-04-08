@@ -3,12 +3,13 @@ const divLinks = document.querySelector("#menu1");
 const botoncito = document.querySelector("#toggle-menu");
 
 const trackCarousel = document.getElementById("track");
+const BASE_URL_IMG = "https://mdlbiyrwccyoblevhoid.supabase.co/storage/v1/object/public/assets";
 
 
 let menu = [
   {
     name: "Home",
-    url: "pages/index.html",
+    url: "../index.html",
   },
   {
     name: "Gallery",
@@ -41,7 +42,7 @@ menu.forEach((item) => {
 function printCard(img, title, description) {
   trackCarousel.innerHTML += `<div class="card-1 carrusel">
                                 <div class="card-img">
-                                  <img src=${img} alt="imagen ${title}">
+                                  <img src=${BASE_URL_IMG + img} alt="imagen ${title}" class="imgMiniGallery">
                                 </div>
                                 <div class="card-text">
                                     <div>
@@ -50,7 +51,7 @@ function printCard(img, title, description) {
                                     </div>
                                     <i class="material-symbols-outlined i-add">add</i>
                                 </div>
-                              </div>'`;
+                              </div>`;
 };
 
 
@@ -60,17 +61,60 @@ function printAllCards (arr){
   }
 };
 
-/*
+/*  
   Ejercicios:
-    1. funcion de formateo de datos.
-       function formatter / parser
-    2. funcion de informacion al usuario segun el status.
-*/
+      1. funcion de formateo de datos.
+        function formatter / parser
+      2. funcion de informacion al usuario segun el status.
+*/ 
 
 /* ----------- Funciones para cargar datos desde la API -----------  */
 
 /* ENDPOINT - Mini Galeria ID_ClickUp:86bxrerre */
 
+
+function formatterGalleryFromAPI(data) {
+  let formatterArray = [];
+  data.forEach((item) => {
+    formatterArray.push({
+      title: item.name || "",
+      description: item.short_description || "",
+      url: item.image || "",
+    })
+  });
+  return formatterArray;
+}
+
+fetch("https://mdlbiyrwccyoblevhoid.supabase.co/rest/v1/sections?select=*", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kbGJpeXJ3Y2N5b2JsZXZob2lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5NjA3MDgsImV4cCI6MjAyNjUzNjcwOH0.RNheTQLsl5dmh4406McR8ttAmwzfoxnEiDo4gutMCbA",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kbGJpeXJ3Y2N5b2JsZXZob2lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5NjA3MDgsImV4cCI6MjAyNjUzNjcwOH0.RNheTQLsl5dmh4406McR8ttAmwzfoxnEiDo4gutMCbA",
+  },
+  mode: "cors",
+}).then((response) => {
+  if (response.status === 200) {
+    response.json().then((data) => {
+      // debugger;
+      let formattedData = formatterGalleryFromAPI(data);
+      // debugger;
+      // console.log(formattedData);
+      printAllCards(formattedData);
+      })
+      .catch((e) => {
+      });
+  } else if (response.status >= 400) {
+    console.log("status de mas de 400");
+    alert("ERRORRRRR")
+  }
+});
+
+
+
+/*  codigo ANTIGUO
 let arrayApi = [];
 
 function formatter (ar, x){
@@ -111,6 +155,7 @@ fetch("https://mdlbiyrwccyoblevhoid.supabase.co/rest/v1/sections?select=*", {
     console.log("status de mas de 400");
   }
 });
+*/
 
 
 // creo que no funciona el print porque los datos del array cuando llega a esta linea no los tiene aun porque el fetch es una funcion asincrona, entonces tendre o que llamarla dentro del fech o darle un away al fech. SOLUCIONADOOO!! JEJE
@@ -121,7 +166,7 @@ fetch("https://mdlbiyrwccyoblevhoid.supabase.co/rest/v1/sections?select=*", {
 /*
   EJERCICIOS:
     1) necesito recoger los datos del input cuando le den al boton enviar.
-    2) necesito enviar a la api dichos datos.
+    2) necesito enviar a la api dichos datos. Para esto voy a usar Amazon SES.
 */
 
 //funcion para recoger datos del input

@@ -126,6 +126,9 @@
     height: 273px;
     border-radius: 20px;
 }
+.imgMiniGallery{
+    width: 100%;
+}
 
 .card-text{ 
     display: flex;
