@@ -5,7 +5,6 @@ const botoncito = document.querySelector("#toggle-menu");
 const trackCarousel = document.getElementById("track");
 
 
-
 let menu = [
   {
     name: "Home",
@@ -32,34 +31,17 @@ menu.forEach((item) => {
   divLinks.innerHTML += `<a href="${item.url}">${item.name}</a>`;
 });
 
-/*
-----Esta funcion es la basica, utilizando el bucle for y llamando a la funcion despues para que se muestre.
-pero la he sustituido por un forEach----
-
-function mostrarMenu() {
-
-  for (let g = 0; g < menu.length; g++) {
-    divLinks.insertAdjacentHTML(
-      "beforeend",
-      `
-        <a href="${menu[g].url}">${menu[g].name}</a>
-      `
-    );
-  }
-
-}
-mostrarMenu();
-*/
 
 /*
-funcion para mostrar las cards en el carrusel de la seccion 3
-Funcion printCard -> pinta una sola card
-funcion printAllCards -> pinta con un bucle todas las cards
+  funcion para mostrar las cards en el carrusel de la seccion 3
+  Funcion printCard -> pinta una sola card
+  funcion printAllCards -> pinta con un bucle todas las cards
 */
 
 function printCard(img, title, description) {
   trackCarousel.innerHTML += `<div class="card-1 carrusel">
-                                <div class="card-img">${img}
+                                <div class="card-img">
+                                  <img src=${img} alt="imagen ${title}">
                                 </div>
                                 <div class="card-text">
                                     <div>
@@ -74,23 +56,20 @@ function printCard(img, title, description) {
 
 function printAllCards (arr){
   for (let i = 0; i < arr.length; i++) {
-    debugger;
-    console.log(arr[i].title);
-    console.log(arr.length);
-    printCard(arr[i].title, arr[i].title, arr[i].title);
-    debugger;
+    printCard(arr[i].url, arr[i].title, arr[i].description);
   }
 };
 
 /*
-Ejercicios:
-1. funcion de formateo de datos.
-function formatter / parser
-
-2. funcion de informacion al usuario segun el status.
+  Ejercicios:
+    1. funcion de formateo de datos.
+       function formatter / parser
+    2. funcion de informacion al usuario segun el status.
 */
 
-/* Funciones para cargar datos desde la API */
+/* ----------- Funciones para cargar datos desde la API -----------  */
+
+/* ENDPOINT - Mini Galeria ID_ClickUp:86bxrerre */
 
 let arrayApi = [];
 
@@ -115,15 +94,15 @@ fetch("https://mdlbiyrwccyoblevhoid.supabase.co/rest/v1/sections?select=*", {
   mode: "cors",
 }).then((res) => {
   if (res.status === 200) {
-    console.log("status de mas de 200");
-    alert("status de mas de 200");
+    //console.log("status de mas de 200");
+    //alert("status de mas de 200");
     res
       .json()
       .then((r) => {
         r.forEach((i) => {
           formatter (arrayApi, i)
         });
-        console.log(arrayApi);
+        //console.log(arrayApi);
         printAllCards(arrayApi);
       })
       .catch((e) => {
@@ -134,6 +113,30 @@ fetch("https://mdlbiyrwccyoblevhoid.supabase.co/rest/v1/sections?select=*", {
 });
 
 
+// creo que no funciona el print porque los datos del array cuando llega a esta linea no los tiene aun porque el fetch es una funcion asincrona, entonces tendre o que llamarla dentro del fech o darle un away al fech. SOLUCIONADOOO!! JEJE
 
-// creo que no funciona el print porque los datos del array cuando llega a esta liniea no los tiene aun porque el fecch es una funcion asincrona, entonces tendre o que llamarla dentro del fech o darle un away al fech.SOLUCIONADOOO!! JEJE
+
+/* ENDPOINT - Usuario contacta ID_ClickUp:86by8fyax */
+
+/*
+  EJERCICIOS:
+    1) necesito recoger los datos del input cuando le den al boton enviar.
+    2) necesito enviar a la api dichos datos.
+*/
+
+//funcion para recoger datos del input
+
+let btnContact = document.getElementById("btnContactHome");
+let emailContact = document.getElementById("emailContactHome");
+
+btnContact.addEventListener("click", () => {
+
+  debugger;
+  alert("el boton funciona");
+  var valor = emailContact.value;
+  debugger;
+  alert("el valor es:"+ valor);
+
+});
+
 
