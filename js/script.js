@@ -13,11 +13,11 @@ let menu = [
   },
   {
     name: "Gallery",
-    url: "pages/Gallery.html",
+    url: "../pages/Gallery.html",
   },
   {
     name: "Contact",
-    url: "pages/Contact.html",
+    url: "../pages/Contact.html",
   },
 ];
 
