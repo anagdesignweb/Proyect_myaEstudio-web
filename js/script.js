@@ -104,13 +104,12 @@ fetch("https://mdlbiyrwccyoblevhoid.supabase.co/rest/v1/sections?select=*", {
       // console.log(formattedData);
       printAllCards(formattedData);
       })
-      .catch((e) => {
-      });
-  } else if (response.status >= 400) {
-    console.log("status de mas de 400");
-    alert("ERRORRRRR")
+  } else {
+    alert("Ha ocurrido un error, intentelo de nuevo mas tarde");
   }
-});
+}).catch(() => {
+  alert("Ha ocurrido un error, intentelo de nuevo mas tarde");
+});;
 
 
 
