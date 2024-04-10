@@ -71,6 +71,9 @@ h4 {
 h5 {
   font-size: 17.5px;
 }
+h6{
+  font-size: 20px;
+}
 p {
   font-size: 16px;
   font-style: normal;
@@ -107,6 +110,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 section{
   max-width: 1200px;
