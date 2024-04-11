@@ -45,22 +45,6 @@
     width: 325px;
 }
 
-.button-primary{
-    width: 128px;
-    cursor: pointer;
-    padding: 8px 16px;
-    line-height: 20px;
-    border-radius: 10px;
-    background: var(  --color-primary-default);
-    color: white;
-    border-style: none;
-}
-
-.button-primary:hover {
-    background-color: var(--color-primary-hover);
-    border-color: #1b1f2326;
-    transition-duration: 0.1s;
-}
 .disabled {
     opacity: 0.6;
     cursor: not-allowed;

@@ -10,6 +10,9 @@
 @import url(../css/contact.css);
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* FORMATEO INCIAL  */
 *,
 *::before,
@@ -17,7 +20,7 @@
 html {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto flex', sans-serif;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -34,8 +37,13 @@ html {
   --color-neutral-medium: #808080;
   --color-neutral-dark: #2b2b2b;
   --color-neutral-light: #c0c0c0;
+  --color-neutral-form: #EAEAEA;
   --color-neutral-light-2: #F5F5F5;
   --color-accent: #f4af3e;
+  --Suporting-Green: #55C05A;
+  --Suporting-Green-dark: #256528;
+  --Suporting-red: #F7554A;
+  --Suporting-red-dark: #9A1007;
 }
 
 /*text styles*/
@@ -77,10 +85,11 @@ h6{
 p {
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 21px;
   color: var(--color-neutral-dark);
 }
+
 
 /* -- GENERAL -- */
 
@@ -98,6 +107,26 @@ input:focus {
 /* de momento los enlaces estan sin colores, pendiente de cambiar*/
 a, a:hover, a:visited{
   text-decoration: none;
+}
+
+.button-primary{
+  min-width: 128px;
+  cursor: pointer;
+  padding: 8px 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  background: var(  --color-primary-default);
+  color: white;
+  border-style: none;
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: #1b1f2326;
+  transition-duration: 0.1s;
+}
+.icon-neutral{
+  color: var(--color-neutral-medium)!important;
 }
 body{
   overflow-x: hidden;

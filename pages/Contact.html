@@ -7,85 +7,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produccion WEB - MyaEstudio by AnaGarcia</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
 </head>
 
 <body>
     <header class="navbar">
-            <div class="container-navbar">
-                <div class="navbar-logo">
-                    <img src="../Assets/logo mya 2022.png" alt="Logo nombre de la empresa"> 
-                </div>
-                <div class="navbar-menu-icon">
-                    <label for="toggle" class="material-symbols-outlined">menu</label>
-                    <input class="navbar-btn" type="checkbox" id="toggle"/>
-                </div>
-                <nav class="navbar-nav menu" id="nav">
-                    <div class="container-menu">
-                        <div class="menu-1">
-                            <a href="">Home</a>
-                            <a href="">Galería</a>
-                            <a href="">Contacto</a>                        
-                        </div>
-                        <div class="menu-2"> 
-                            <a href="" class="a-shop">
-                                <span class="material-symbols-outlined">shopping_cart</span>
-                            </a> 
-                            <a href="" class="a-login">
-                                <span class="material-symbols-outlined">login</span>
-                                <p>Login</p>
-                            </a>
-                        </div>   
-                    </div>
-                </nav>   
+        <div class="container-navbar">
+            <div class="navbar-logo">
+                <a href="../index.html">
+                    <img src="../Assets/logo mya 2022.png" alt="Logo nombre de la empresa">
+                </a>
             </div>
+            <div class="navbar-menu-icon">
+                <span id="toggle-menu" class="material-symbols-outlined">menu</span>
+            </div>
+            <nav class="navbar-nav menu" id="nav">
+                <div class="container-menu">
+                    <div class="menu-1" id="menu1">                       
+                    </div>
+                    <div class="menu-2">
+                        <a href="" class="a-shop">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </a>
+                        <a href="" class="a-login">
+                            <span class="material-symbols-outlined">login</span>
+                            <p>Login</p>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main class="container-main-Contact">
-        
+    <main class="container-main-Contact">       
         <h1 hidden>Contact</h1>
-
-        <div>
+        <div class="cont-1">
             <div>
                 <h4>Contacta con nosotros</h4>
-                <h6>Cuéntanos que necesitas para tu sesión de fotos</h6>
+                <h6 style="text-transform: uppercase; line-height: 20.9px; font-size: 16px;">Cuéntanos que necesitas para tu sesión de fotos</h6>
             </div>
             <div>
-                <p>Contacta de manera directa a través de <a href="https://wa.me/34687148589">WhatsApp.</a> <br>Es la forma mas rápisa de llegar a nosotras. </p>
+                <p>Contacta de manera directa a través de <a href="https://wa.me/34687148589" style="text-decoration-line: underline; color: var(--Suporting-Green-dark);">WhatsApp.</a> <br>Es la forma mas rápisa de llegar a nosotras. </p>
                 <p>También nos puedes mandar un mensaje con nuestro formulario o al correo myaestudiofotografiayarte@gmail.com y te responderemos lo antes posible.</p>
             </div>
         </div>
 
-        <div>
-            <form>
-                <ul>
-                <li>
-                    <label for="fname">Nombre:</label>
-                    <input type="text" id="fname" name="user_fname" />
-                </li>
-                <label for="lname">Apellido:</label>
-                <input type="text" id="lname" name="user_lname" />
-            </li>
-            <li>
-                <label for="phone">Numero de teléfono:</label>
-                <input type="phone" id="phone" name="user_phone" />
-            </li>
-                <li>
-                    <label for="mail">Email:</label>
-                    <input type="email" id="mail" name="user_email" />
-                </li>
-                <li>
-                    <label for="msg">Mensaje:</label>
-                    <textarea id="msg" name="user_message"></textarea>
-                </li>
-                </ul>
+        <div class="section-form">
+            <form id="firtsContact" name="firtsContact">
+                <fieldset>
+                    <label for="fname">Nombre</label>
+                    <input type="text" id="fname" name="user_fname" placeholder="Nombre..." />   
+                    <label for="lname">Apellido</label>
+                    <input type="text" id="lname" name="user_lname" placeholder="Apellido..."/>                        
+                    <label for="phone">Numero de teléfono</label>
+                    <input type="phone" id="phone" name="user_phone" placeholder="666-666-666"/>
+                    <p class="form-privacity">*El numero de teléfono debe tener 8 caracteres</p>                     
+                    <label for="mail">E-mail</label>
+                    <input type="email" id="mail" name="user_email" placeholder="E-mail.."/>
+                    <label for="msg">Mensaje</label>
+                    <textarea id="msg" name="user_message" rows="10" placeholder="Mensaje..."></textarea>
+                    <div>
+                        <input type="checkbox" id="privacity" name="privacity" value="privacity" class="check-privacity">
+                        <label class="form-privacity" for="privacity">Al enviar una email significa que acepta los <b style="    font-size: 12px !important;">Términos y condiciones</b> y nuestra <b style="font-size: 12px !important;">Política de privacidad.</b></label>                    
+                    </div>
+                </fieldset>
+                <div id="btn_form">
+                    <input type="submit" id="enviar" name="enviar" value="Enviar" class="button-primary">
+                </div>
             </form>            
         </div>
-
-
+        <!-- Section 6 -->
+        <section class="section-6 section-flex-colum-mobile">
+            <div class="s6-cont1">
+                <h2>contacto</h2>
+                <div class="s6-cont1-1">
+                    <p>loresummmm@gmail.com</p>
+                    <p>+34 666 67 76 67</p>
+                    <p>C/ Lorem Sun , Sumsum</p>
+                </div>
+                <div class="footer-icons">
+                    <img class=".icon-neutral" src="../Assets/icons/Facebook.svg" alt="icono enlace a facebook">
+                    <img src="../Assets/icons/Instagram.svg" alt="icono enlace a instagram">
+                    <img src="../Assets/icons/whatsapp.svg" alt="icono enlace a whatsapp">
+                </div>
+            </div>
+            <div class="s6-cont2"><iframe class="s6-cont2"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.7364921380504!2d-4.5444754!3d36.608655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72fdddd7f603d5%3A0x19949bd868575833!2sMYA%20Estudio%20Fotograf%C3%ADa!5e0!3m2!1ses!2ses!4v1710962297856!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
           
     </main>
 
