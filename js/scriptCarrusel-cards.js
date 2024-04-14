@@ -10,4 +10,4 @@ rightBtn.addEventListener("click", ()=> {
 
 leftBtn.addEventListener("click", ()=> {
     content.scrollLeft += 380;
-})
+});
