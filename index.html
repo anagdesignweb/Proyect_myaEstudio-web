@@ -26,12 +26,12 @@
                     <div class="menu-1" id="menu1">                       
                     </div>
                     <div class="menu-2">
-                        <a href="" class="a-shop">
-                            <span class="material-symbols-outlined">shopping_cart</span>
-                        </a>
-                        <a href="" class="a-login">
+                        <a href="" class="a-login disabled">
                             <span class="material-symbols-outlined">login</span>
                             <p>Login</p>
+                        </a>
+                        <a href="" class="a-shop disabled">
+                            <span class="material-symbols-outlined">shopping_cart</span>
                         </a>
                     </div>
                 </div>
@@ -45,6 +45,7 @@
             <div></div>
         </section>
         <!-- Section 2 -->
+        <span class="span-section-2 section-flex-colum-mobile">
         <section class="section-2 section-flex-colum-mobile">
             <div class="container-1">
                 <h4 class="text-align-cent">¿Quieres reservar tu sesión?</h4>
@@ -52,21 +53,25 @@
             <div class="container-2">
                 <p class="text-align-cent">Ponte en contacto con Nosotros para información o directamente concretar una
                     cita. Déjanos tu contacto y te llamaremos!</p>
-                <input class="input-primary-email" type="text" placeholder="Your email" id="emailContactHome" autofocus>
-                <button class="button-primary" id="btnContactHome">Contactar</button>
+                    <div>
+                        <input class="input-primary-email" type="text" placeholder="Your email" id="emailContactHome" autofocus>
+                        <button class="button-primary" id="btnContactHome">Contactar</button>                        
+                    </div>
             </div>
         </section>
+        </span>
+
         <!-- Section 3 -->
 
 
         <section class="section-3" id="carrusel-list">
 
             <h4>En nuestra galería puedes ver mas de nuestro trabajo</h4>
-            <div>
-                <button class="carrusel-arrow carrusel-back" id="button-back">
+            <div class="btn-nav-gallery">
+                <button class="carrusel-arrow carrusel-back btn-arrow-nav" id="button-back">
                     <span class="material-symbols-outlined">arrow_back_ios</span>
                 </button>  
-                <button class="carrusel-arrow carrusel-prev" id="button-prev">
+                <button class="carrusel-arrow carrusel-prev btn-arrow-nav" id="button-prev">
                     <span class="material-symbols-outlined">arrow_forward_ios</span>
                 </button>
             </div>

@@ -29,7 +29,7 @@ botoncito.addEventListener("click", () => {
 });
 
 menu.forEach((item) => {
-  divLinks.innerHTML += `<a href="${item.url}">${item.name}</a>`;
+  divLinks.innerHTML += `<a href="${item.url}"><h6>${item.name}</h6></a>`;
 });
 
 

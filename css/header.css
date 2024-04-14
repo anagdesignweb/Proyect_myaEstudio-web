@@ -71,17 +71,25 @@
     gap: 60px;
 }
 
+.menu-1 > a > h6:hover{
+color: var(--color-primary-hover);
+}
 .menu .menu-2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
-.a-login{
+.a-login {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    color: var(--color-neutral-600);
+}
+.a-login p{
+    color: var(--color-neutral-600);
 }
 
 #toggle { /* checkbox menu desplegable */
@@ -111,11 +119,10 @@
 /* -MEDIA QUERIES- */
 /* --- header / desktop --- */
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1240px) {
 
     .navbar-menu-icon{
         display: none;
-        background-color: blueviolet;
     }
     .menu {
         width: 100%;
