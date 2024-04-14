@@ -55,6 +55,7 @@ function printCard(img, title, description) {
 };
 
 
+
 function printAllCards (arr){
   for (let i = 0; i < arr.length; i++) {
     printCard(arr[i].url, arr[i].title, arr[i].description);
