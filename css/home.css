@@ -312,6 +312,7 @@ text-align: center;
     }
     .section-6{
         flex-direction: row;
+        height: 580px;
     }
     .container-faq{
         gap: 100px;
