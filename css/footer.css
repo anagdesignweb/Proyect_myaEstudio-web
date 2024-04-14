@@ -20,15 +20,21 @@ footer{
     align-items: center;
     gap: 40px;
 }
+.footer-div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
 .footer-text1{
-    font-size: 20px;
     color: var(--color-secondary-default);
-    font-weight: 500;
 }
 .footer-icons{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
 }
 .footer-contact{
 
@@ -53,3 +59,19 @@ footer{
 .footer-icons img{
     width: 40px;
 }
+
+/* -- Queries -- */
+
+@media only screen and (min-width: 834px){
+
+}
+  
+@media (min-width: 1240px) {
+    .footer-text1{
+        font-size: 31px;
+    }
+    .footer-div > div{
+        flex-direction: row-reverse;
+    }
+
+} 

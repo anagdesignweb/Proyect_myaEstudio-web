@@ -1,5 +1,4 @@
 /* clases Comunes */
-
 .section-flex-colum-mobile{
     display: flex;
     flex-direction: column;
@@ -13,7 +12,6 @@
 }
 
 /* Sección 1 - Imagen cabecera */
-
 .section-1{
     width: 100%;
     height: 438px;
@@ -21,15 +19,13 @@
     background-position: center; /* Center the image */
     background-size: cover;
 }
-
 /* Sección 2 - Contacta con tu email */
 .span-section-2{
-    border-bottom: 1px solid #B1B5C3;
-    background: #FCFCFD;
+    border-bottom: 2px solid var(--color-neutral-light-2);
+    background: FCFCFD;
     width: 100%;
 }
 .section-2{
-
     justify-content: space-between;
     min-height: 400px;
     padding: 30px;
@@ -47,17 +43,15 @@
     width: 325px;
 }
 .section-2 .container-2 div{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
-
 .disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
-
 .input-primary-email{
     display: flex;
     justify-content: center;
@@ -84,9 +78,7 @@ gap: 30px;
     outline: none;
     border: 2px solid var(--color-primary-hover);
 }
-
 /* Sección 3 - Slider de la galería */
-
 .section-3{
     position:relative;
     display: flex;
@@ -118,12 +110,12 @@ gap: 30px;
     text-shadow: 1px 1px 1px var(--color-neutral-light);
 }
 #button-back span, #button-prev span{
-font-size: 40px;
-
+    font-size: 40px;
 }
 .carrusel-track{
     height: 100%;
     width: 100%;
+    max-width: 1200px;
     overflow-x: scroll;
     display: flex;
     scroll-snap-type: x mandatory;
@@ -131,7 +123,6 @@ font-size: 40px;
     scroll-behavior: smooth;
     padding-bottom: 20px;
     gap: 20px;
-
 }
 .carrusel-track::-webkit-scrollbar{
     display: none;
@@ -155,7 +146,6 @@ font-size: 40px;
     height: 100%;
     border-radius: 20px 20px 0 0;
 }
-
 .card-text{ 
     display: flex;
     align-items: center;
@@ -169,14 +159,21 @@ font-size: 40px;
     color: var(--color-accent);
     font-size: 2.5rem;
 }
-
-
 /* Sección 4 - Sobre mi */
-
 .section-4{
-    justify-content: center;
-    height: 770px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center; 
+    border-top: 2px solid var(--color-neutral-light-2);
+}
+.section-4 > span {
     gap: 40px;
+    margin:45px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
 }
 .personal-image{
     width: 300px;
@@ -186,13 +183,24 @@ font-size: 40px;
     width: 100%;
     border-radius: 10px;
 }
+.s4-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 20px;
+    max-width: 560px;
+}
+.s4-description > h4{
+    color: var(--color-primary-default);
+}
 /* Sección 5 - imagenMuestra */
-
 .section-5 {
     width: 100%;
     height: 500px;
     background: url("../Assets/images/novios8.jpg");
-    background-position: center; /* Center the image */
+    background-position: center;
     background-size: cover;
 }
 /* Sección 6 - Contacto */
@@ -210,6 +218,7 @@ font-size: 40px;
 }
 .s6-cont1 h2{
 color: var(--color-accent);
+text-align: center;
 }
 .s6-cont1-1 p{
     padding: 8px 0px;
@@ -222,15 +231,13 @@ color: var(--color-accent);
     max-width: 700px;
     height: 380px;
 }
-
 /* Sección 7 - FAQ */
-
 .section-7{
     padding: 27px 13px;
     justify-content: space-between;
     gap: 32px;
-    border-top: 1px solid var(--color-neutral-light);
-    border-bottom: 1px solid var(--color-neutral-light);
+    border-top: 2px solid var(--color-neutral-light-2);
+    border-bottom: 2px solid var(--color-neutral-light-2);
     width: 100%;
 }
 .section-7 h3{
@@ -247,7 +254,7 @@ color: var(--color-accent);
     width: 330px;
     padding: 25px 20px;
     border-radius: 4px;
-    border: 1px solid var(--color-neutral-light);
+    border: 3px solid var(--color-neutral-light-2);
 }
 .faq-menu{
     display: flex;
@@ -269,10 +276,7 @@ color: var(--color-accent);
 .faq-response > h6{
     margin-bottom: 10px;
 }
-
-
 /* -- Queries -- */
-
 @media only screen and (min-width: 834px){
 
     .section-2 .container-2{
@@ -287,8 +291,11 @@ color: var(--color-accent);
     .container-faq{
         flex-direction: row;
     }
+    .s4-description > h4{
+        font-size: 40px;
+        font-weight: 700px;
+    }
 }
-  
 @media (min-width: 1240px) {
     .section-1{
         height: 738px;
@@ -311,5 +318,8 @@ color: var(--color-accent);
     }
     .faq-response{
         width: 666px;
+    }
+    .section-4 > span{
+        flex-direction: row;
     }
 } 
