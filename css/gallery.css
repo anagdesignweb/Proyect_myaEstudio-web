@@ -69,8 +69,7 @@
     height: 310px;
     border-radius: 20px;
     object-fit: cover;
-}
-
+} 
 
 /* -- Queries -- */
 @media only screen and (min-width: 834px){
@@ -96,4 +95,5 @@
         flex-direction: row;
         align-items: center;
     }
-} 
+}
+

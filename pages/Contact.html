@@ -37,43 +37,50 @@
             </nav>
         </div>
     </header>
-    <main class="container-main-Contact">       
+    <main class="container-main-Contact" >       
         <h1 hidden>Contact</h1>
-        <div class="cont-1">
+        <section class="section-cont-1">
             <div>
                 <h4>Contacta con nosotros</h4>
                 <h6 style="text-transform: uppercase; line-height: 20.9px; font-size: 16px;">Cuéntanos que necesitas para tu sesión de fotos</h6>
             </div>
-            <div>
-                <p>Contacta de manera directa a través de <a href="https://wa.me/34687148589" style="text-decoration-line: underline; color: var(--Suporting-Green-dark);">WhatsApp.</a> <br>Es la forma mas rápisa de llegar a nosotras. </p>
+            <div class="s-cont-1-p">
+                <p>Contacta de manera directa a través de <a href="https://wa.me/34687148589" style="text-decoration-line: underline; color: var(--Suporting-Green-dark);" target="_blank">WhatsApp.</a> <br>Es la forma mas rápisa de llegar a nosotras. </p>
                 <p>También nos puedes mandar un mensaje con nuestro formulario o al correo myaestudiofotografiayarte@gmail.com y te responderemos lo antes posible.</p>
             </div>
-        </div>
-
-        <div class="section-form">
+        </section>
+        <section class="section-form">
             <form id="firtsContact" name="firtsContact">
                 <fieldset>
-                    <label for="fname">Nombre</label>
-                    <input type="text" id="fname" name="user_fname" placeholder="Nombre..." />   
-                    <label for="lname">Apellido</label>
-                    <input type="text" id="lname" name="user_lname" placeholder="Apellido..."/>                        
-                    <label for="phone">Numero de teléfono</label>
-                    <input type="phone" id="phone" name="user_phone" placeholder="666-666-666"/>
-                    <p class="form-privacity">*El numero de teléfono debe tener 8 caracteres</p>                     
-                    <label for="mail">E-mail</label>
-                    <input type="email" id="mail" name="user_email" placeholder="E-mail.."/>
-                    <label for="msg">Mensaje</label>
-                    <textarea id="msg" name="user_message" rows="10" placeholder="Mensaje..."></textarea>
-                    <div>
-                        <input type="checkbox" id="privacity" name="privacity" value="privacity" class="check-privacity">
-                        <label class="form-privacity" for="privacity">Al enviar una email significa que acepta los <b style="    font-size: 12px !important;">Términos y condiciones</b> y nuestra <b style="font-size: 12px !important;">Política de privacidad.</b></label>                    
+                    <div class="div-1">
+                        <label for="fname">Nombre</label>
+                        <input type="text" id="fname" name="user_fname" placeholder="Nombre..." />   
+                        <label for="lname">Apellido</label>
+                        <input type="text" id="lname" name="user_lname" placeholder="Apellido..."/>                        
+                        <label for="phone">Numero de teléfono</label>
+                        <input type="phone" id="phone" name="user_phone" placeholder="666-666-666"/>
+                        <p class="form-privacity">*El numero de teléfono debe tener 8 caracteres</p>                     
+                        <label for="mail">E-mail</label>
+                        <input type="email" id="mail" name="user_email" placeholder="E-mail.."/>                        
+                    </div>
+                    <div class="div-2">
+                        <div class="input-msn">
+                            <label for="msg">Mensaje</label>
+                            <textarea id="msg" name="user_message" rows="10" placeholder="Mensaje..."></textarea>                            
+                        </div>
+                        <div>
+                            <div class="div-checkPrivacity">
+                                <input type="checkbox" id="privacity" name="privacity" value="privacity" class="check-privacity">
+                                <label class="form-privacity" for="privacity">Al enviar una email significa que acepta los <b style="    font-size: 12px !important;">Términos y condiciones</b> y nuestra <b style="font-size: 12px !important;">Política de privacidad.</b></label>                    
+                            </div>   
+                            <div id="btn_form">
+                                <input type="submit" id="enviar" name="enviar" value="Enviar" class="button-primary">
+                            </div>                             
+                        </div>
                     </div>
                 </fieldset>
-                <div id="btn_form">
-                    <input type="submit" id="enviar" name="enviar" value="Enviar" class="button-primary">
-                </div>
             </form>            
-        </div>
+        </section>
         <!-- Section 6 -->
         <section class="section-6 section-flex-colum-mobile">
             <div class="s6-cont1">
@@ -84,9 +91,15 @@
                     <p>C/ Lorem Sun , Sumsum</p>
                 </div>
                 <div class="footer-icons">
-                    <img class=".icon-neutral" src="../Assets/icons/Facebook.svg" alt="icono enlace a facebook">
-                    <img src="../Assets/icons/Instagram.svg" alt="icono enlace a instagram">
-                    <img src="../Assets/icons/whatsapp.svg" alt="icono enlace a whatsapp">
+                    <a href="https://www.facebook.com/myaestudiofotografiayarte/?locale=es_ES" target="_blank">
+                        <img src="../Assets/icons/FacebookWhite.svg" alt="icono enlace a facebook">
+                    </a>
+                    <a href="https://www.instagram.com/myaestudiofotografiayarte/" target="_blank">
+                    <img src="../Assets/icons/InstagramWhite.svg" alt="icono enlace a instagram">
+                    </a>
+                    <a href="https://wa.me/34625019769/?text=Hola!%20Me%20gustaría%20informarme%20sobre%20uno%20de%20tus%20servicios" target="_blank">
+                    <img src="../Assets/icons/whatsappWhite.svg" alt="icono enlace a whatsapp">
+                    </a>
                 </div>
             </div>
             <div class="s6-cont2"><iframe class="s6-cont2"
@@ -97,20 +110,27 @@
         </section>
           
     </main>
-
     <footer>
         <div class="container-footer">
             <div class="footer-div">
-                <div class="footer-text1">Sígueme en @myaestudio</div>
-                <div class="footer-icons">
-                    <img src="../Assets/icons/facebook.svg" alt="">
-                    <img src="../Assets/icons/instagram.svg" alt="">
-                    <img src="../Assets/icons/whatsapp.svg" alt="">
-                </div>
-                <div class="footer-contact" >
-                    <div>myaestudiofotografiayarte@gmail.com</div>
-                    <div>+1-2345-6789</div>
-                    <div>Calle castilla 2, Málaga, Spain</div>
+                <h6 class="footer-text1">Sígueme en @myaestudio</h6>
+                <div>
+                    <div class="footer-icons">
+                        <a href="https://www.facebook.com/myaestudiofotografiayarte/?locale=es_ES" target="_blank">
+                            <img src="../Assets/icons/FacebookWhite.svg" alt="icono enlace a facebook">
+                        </a>
+                        <a href="https://www.instagram.com/myaestudiofotografiayarte/" target="_blank">
+                        <img src="../Assets/icons/InstagramWhite.svg" alt="icono enlace a instagram">
+                        </a>
+                        <a href="https://wa.me/34625019769/?text=Hola!%20Me%20gustaría%20informarme%20sobre%20uno%20de%20tus%20servicios" target="_blank">
+                        <img src="../Assets/icons/whatsappWhite.svg" alt="icono enlace a whatsapp">
+                        </a>
+                    </div>
+                    <div class="footer-contact">
+                        <p>myaestudiofotografiayarte@gmail.com</p>
+                        <p>+34-625019769</p>
+                        <p>Calle castilla 2, Málaga, Spain</p>
+                    </div>                    
                 </div>
             </div>
             <div class="footer-copyright"><span>Copyright © 2024. All rights reserved.</span></div>
